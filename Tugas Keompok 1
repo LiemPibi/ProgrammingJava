@@ -1,0 +1,72 @@
+import java.util.Scanner;
+
+public class main {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+
+        //penamaan data
+        String Nama;
+        String Jumlahorang;
+        String NasiGorengSpesial;
+        String AyamBakarSpesial;
+        String SteakSirloinSpesial;
+        String KwetiawSiramSpesial;
+        String KambingGulisngSPesial;
+        int JumlahPesanan;
+        int Pembelianperorang ;
+        double TotalPembelian;
+
+        //input harga
+        double hargaNasi = 9999.99;
+        double hargaAyam = 12345.67;
+        double hargaSteak = 21108.40;
+        double hargaSiram = 13579.13;
+        double hargaKambing = 98765.43;
+
+        //input data user
+        System.out.println("Selamat Siang...");
+        System.out.print("Pesan untuk berapa orang : ");
+        Jumlahorang = scan.nextLine();
+        System.out.print("Pesanan atas nama : ");
+        Nama = scan.nextLine();
+        System.out.println();
+
+        //input data
+        System.out.println("Menu Spesial hari ini :");
+        System.out.println("========================");
+        System.out.println("1. Nasi Goreng Spesial    @Rp " + hargaNasi);
+        System.out.println("2. Ayam Bakar Spesial     @Rp " + hargaAyam);
+        System.out.println("3. Steak Sirloin Spesial  @Rp " + hargaSteak);
+        System.out.println("4. Kwetiaw Siram Spesial  @Rp " + hargaSiram);
+        System.out.println("5. Kambing Guling Spesial @Rp " + hargaKambing);
+        System.out.println();
+
+        //input data dari user
+        System.out.print("1. Nasi Goreng Special: ");
+        int nasi = scan.nextInt();
+        System.out.print("2. Ayam Bakar Special: ");
+        int ayam = scan.nextInt();
+        System.out.print("3. Steak Sirloin Special: ");
+        int steak = scan.nextInt();
+        System.out.print("4. Kwetiaw Siram Spesial: ");
+        int siram = scan.nextInt();
+        System.out.print("5. Kambing Guling Special: ");
+        int kambing = scan.nextInt();
+        System.out.println();
+
+        //output data dari user
+        System.out.println("1. Nasi Goreng Spesial    : " + nasi + " porsi * Rp " + hargaNasi + " = Rp. " + hargaNasi * nasi);
+        System.out.println("2. Ayam Bakar Spesial     : " + ayam + " porsi * Rp " + hargaAyam + " = Rp. " + hargaAyam * ayam);
+        System.out.print("3. Steak Sirloin Spesial  : " + steak + " porsi * Rp " + hargaSteak + "0 = Rp. ");
+        System.out.printf("%.2f\n", hargaSteak * steak);
+        System.out.println("4. Kwetiaw Siram Spesial  : " + siram + " porsi * Rp " + hargaSiram + " = Rp. " + hargaSiram * siram);
+        System.out.print("5. Kambing Guling Spesial : " +kambing + " porsi * Rp " + hargaKambing + " = Rp. ");
+        System.out.printf("%.2f\n", hargaKambing * kambing);
+        System.out.print("=============================================================================================");
+
+        //total pembelian
+        int total;
+        System.out.println("Total Pembelian = " );
+
+    }
+}
