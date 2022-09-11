@@ -4,31 +4,19 @@ public class main {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
-        //penamaan data
-        String Nama;
-        String Jumlahorang;
-        String NasiGorengSpesial;
-        String AyamBakarSpesial;
-        String SteakSirloinSpesial;
-        String KwetiawSiramSpesial;
-        String KambingGulisngSPesial;
-        int JumlahPesanan;
-        int Pembelianperorang ;
-        double TotalPembelian;
-
         //input harga
-        double hargaNasi = 9999.99;
-        double hargaAyam = 12345.67;
-        double hargaSteak = 21108.40;
-        double hargaSiram = 13579.13;
-        double hargaKambing = 98765.43;
+        float hargaNasi = 9999.99f;
+        float hargaAyam = 12345.67f;
+        float hargaSteak = 21108.40f;
+        float hargaSiram = 13579.13f;
+        float hargaKambing = 98765.43f;
 
         //input data user
         System.out.println("Selamat Siang...");
         System.out.print("Pesan untuk berapa orang : ");
-        Jumlahorang = scan.nextLine();
+        scan.nextLine();
         System.out.print("Pesanan atas nama : ");
-        Nama = scan.nextLine();
+        scan.nextLine();
         System.out.println();
 
         //input data
@@ -40,6 +28,9 @@ public class main {
         System.out.println("4. Kwetiaw Siram Spesial  @Rp " + hargaSiram);
         System.out.println("5. Kambing Guling Spesial @Rp " + hargaKambing);
         System.out.println();
+
+        //pesan
+        System.out.println("Pesanan Anda [batas pesanan 0-10 porsi]");
 
         //input data dari user
         System.out.print("1. Nasi Goreng Special: ");
@@ -55,18 +46,23 @@ public class main {
         System.out.println();
 
         //output data dari user
-        System.out.println("1. Nasi Goreng Spesial    : " + nasi + " porsi * Rp " + hargaNasi + " = Rp. " + hargaNasi * nasi);
-        System.out.println("2. Ayam Bakar Spesial     : " + ayam + " porsi * Rp " + hargaAyam + " = Rp. " + hargaAyam * ayam);
-        System.out.print("3. Steak Sirloin Spesial  : " + steak + " porsi * Rp " + hargaSteak + "0 = Rp. ");
-        System.out.printf("%.2f\n", hargaSteak * steak);
-        System.out.println("4. Kwetiaw Siram Spesial  : " + siram + " porsi * Rp " + hargaSiram + " = Rp. " + hargaSiram * siram);
+        float totalnasi = nasi * hargaNasi;
+        float totalayam = ayam * hargaAyam;
+        float totalsteak = steak * hargaSteak;
+        float totalsiram = siram * hargaSiram;
+        float totalkambing = kambing * hargaKambing;
+        System.out.println("1. Nasi Goreng Spesial    : " + nasi + " porsi * Rp " + hargaNasi + "  = Rp. " + totalnasi);
+        System.out.println("2. Ayam Bakar Spesial     : " + ayam + " porsi * Rp " + hargaAyam + " = Rp. " + totalayam);
+        System.out.print("3. Steak Sirloin Spesial  : " + steak + " porsi * Rp " + hargaSteak + " = Rp. ");
+        System.out.printf("%.2f\n", totalsteak);
+        System.out.println("4. Kwetiaw Siram Spesial  : " + siram + " porsi * Rp " + hargaSiram + " = Rp. " + totalsiram);
         System.out.print("5. Kambing Guling Spesial : " +kambing + " porsi * Rp " + hargaKambing + " = Rp. ");
-        System.out.printf("%.2f\n", hargaKambing * kambing);
-        System.out.print("=============================================================================================");
+        System.out.printf("%.2f\n", totalkambing);
+        System.out.println("=============================================================================================");
 
         //total pembelian
-        int total;
-        System.out.println("Total Pembelian = " );
+        double TotalPembelian = totalnasi + totalayam + totalsteak + totalsiram + totalkambing;
+        System.out.println("Total Pembelian                                   = Rp. " + TotalPembelian);
 
     }
 }
