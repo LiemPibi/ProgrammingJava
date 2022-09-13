@@ -45,9 +45,6 @@ public class main {
         int kambing = scan.nextInt();
         System.out.println();
 
-        //jumlah orang
-
-
         //output data dari user
         float totalnasi = nasi * hargaNasi;
         float totalayam = ayam * hargaAyam;
@@ -70,6 +67,21 @@ public class main {
         float TotalPembelian = totalnasi + totalayam + totalsteak + totalsiram + totalkambing;
         System.out.println("Total Pembelian\t\t\t\t\t\t\t\t\t\t\t= Rp. " + TotalPembelian);
 
-        
+        //diskon
+        float diskon = TotalPembelian * 10/100;
+        System.out.println("Disc. 10% (Masa Promosi)\t\t\t\t\t\t\t\t= Rp. " + diskon);
+        System.out.println("===================================================================================");
+        float total = TotalPembelian - diskon;
+        System.out.println("Total harga setelah disc 10%\t\t\t\t\t\t\t= Rp. " + total);
+
+        //harga perorang
+        float orang = total / jumlahOrang;
+        System.out.print("Pembelian per orang (untuk " + jumlahOrang + " orang) \t\t\t\t\t= Rp. ");
+        System.out.printf("%.2f\n", orang);
+
+        //closing
+        System.out.println();
+        System.out.println("\t\t\tTerima kasiha atas kunjungan Anda...");
+        System.out.println("\t\t\t\t...tekan ENTER untuk keluar...");
     }
 }
