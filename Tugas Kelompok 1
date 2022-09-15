@@ -60,7 +60,8 @@ public class oldmain {
         System.out.print("4. Kwetiaw Siram Spesial\t: " + siram + " porsi * Rp " + hargaSiram + "\t\t= Rp. ");
         System.out.printf("%.2f\n", totalsiram);
         System.out.print("5. Kambing Guling Spesial\t: " +kambing + " porsi * Rp " + hargaKambing + "\t\t= Rp. ");
-        System.out.printf("%.2f\n", totalkambing + "  +");
+        System.out.printf("%.2f", totalkambing );
+        System.out.print("  +\n");
         System.out.println("===============================================================================");
 
         //total pembelian
