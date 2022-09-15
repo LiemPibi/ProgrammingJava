@@ -59,9 +59,9 @@ public class oldmain {
         System.out.printf("%.2f\n", totalsteak);
         System.out.print("4. Kwetiaw Siram Spesial\t: " + siram + " porsi * Rp " + hargaSiram + "\t\t= Rp. ");
         System.out.printf("%.2f\n", totalsiram);
-        System.out.print("5. Kambing Guling Spesial\t: " +kambing + " porsi * Rp " + hargaKambing + "\t\t= Rp. " + "  -");
-        System.out.printf("%.2f\n", totalkambing);
-        System.out.println("=====================================================================================");
+        System.out.print("5. Kambing Guling Spesial\t: " +kambing + " porsi * Rp " + hargaKambing + "\t\t= Rp. ");
+        System.out.printf("%.2f\n", totalkambing + "  +");
+        System.out.println("===============================================================================");
 
         //total pembelian
         float TotalPembelian = totalnasi + totalayam + totalsteak + totalsiram + totalkambing;
@@ -70,7 +70,7 @@ public class oldmain {
         //diskon
         float diskon = TotalPembelian * 10/100;
         System.out.println("Disc. 10% (Masa Promosi)\t\t\t\t\t\t\t\t= Rp. " + diskon + "  -");
-        System.out.println("=====================================================================================");
+        System.out.println("===============================================================================");
         float total = TotalPembelian - diskon;
         System.out.println("Total harga setelah disc 10%\t\t\t\t\t\t\t= Rp. " + total);
 
