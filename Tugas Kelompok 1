@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class main {
+public class oldmain {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
@@ -14,7 +14,7 @@ public class main {
         //input data user
         System.out.println("Selamat Siang...");
         System.out.print("Pesan untuk berapa orang : ");
-        int jumlahOrang = scan.nextInt();
+        byte jumlahOrang = scan.nextByte();
         System.out.print("Pesanan atas nama : ");
         String nama = scan.next();
         System.out.println();
@@ -34,15 +34,15 @@ public class main {
 
         //input data dari user
         System.out.print("1. Nasi Goreng Special: ");
-        int nasi = scan.nextInt();
+        byte nasi = scan.nextByte();
         System.out.print("2. Ayam Bakar Special: ");
-        int ayam = scan.nextInt();
+        byte ayam = scan.nextByte();
         System.out.print("3. Steak Sirloin Special: ");
-        int steak = scan.nextInt();
+        byte steak = scan.nextByte();
         System.out.print("4. Kwetiaw Siram Spesial: ");
-        int siram = scan.nextInt();
+        byte siram = scan.nextByte();
         System.out.print("5. Kambing Guling Special: ");
-        int kambing = scan.nextInt();
+        byte kambing = scan.nextByte();
         System.out.println();
 
         //output data dari user
@@ -59,9 +59,9 @@ public class main {
         System.out.printf("%.2f\n", totalsteak);
         System.out.print("4. Kwetiaw Siram Spesial\t: " + siram + " porsi * Rp " + hargaSiram + "\t\t= Rp. ");
         System.out.printf("%.2f\n", totalsiram);
-        System.out.print("5. Kambing Guling Spesial\t: " +kambing + " porsi * Rp " + hargaKambing + "\t\t= Rp. ");
+        System.out.print("5. Kambing Guling Spesial\t: " +kambing + " porsi * Rp " + hargaKambing + "\t\t= Rp. " + "  -");
         System.out.printf("%.2f\n", totalkambing);
-        System.out.println("===================================================================================");
+        System.out.println("=====================================================================================");
 
         //total pembelian
         float TotalPembelian = totalnasi + totalayam + totalsteak + totalsiram + totalkambing;
@@ -69,8 +69,8 @@ public class main {
 
         //diskon
         float diskon = TotalPembelian * 10/100;
-        System.out.println("Disc. 10% (Masa Promosi)\t\t\t\t\t\t\t\t= Rp. " + diskon);
-        System.out.println("===================================================================================");
+        System.out.println("Disc. 10% (Masa Promosi)\t\t\t\t\t\t\t\t= Rp. " + diskon + "  -");
+        System.out.println("=====================================================================================");
         float total = TotalPembelian - diskon;
         System.out.println("Total harga setelah disc 10%\t\t\t\t\t\t\t= Rp. " + total);
 
